@@ -1,11 +1,14 @@
-
 <template>
-  <p class="greeting">{{ greeting }}</p>
+    <div class="w-fit flex flex-col mt-2  justify-start content-start">
+        
+    </div>
 </template>
 
+
+
 <script setup lang="ts">
-import { ref } from 'vue'
-const greeting = ref('Hello World!')
+import { ref } from "vue";
+defineProps(['logo', 'name'])
 </script>
 
 

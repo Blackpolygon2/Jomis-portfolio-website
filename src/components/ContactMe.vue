@@ -39,7 +39,7 @@
     </g>
   </g>
 </svg>
-    <p class="my-0 mx-4 h-auto text-center font-normal text-2xl">Contact me</p>
+    <p class="my-0 mx-2 h-auto text-center font-normal text-2xl">Contact me</p>
   </div>
 </template>
 
