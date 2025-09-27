@@ -1,27 +1,66 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import TestComp from '../components/testcomp.vue';
-import ContactMe from '../components/ContactMe.vue';
-import NameAndFocus from '../components/NameAndFocus.vue';
-import EducationExperinceText from '../components/EducationExperinceText.vue';
-import Skill from '../components/Skill.vue';
+import Layout from "../layouts/Layout.astro";
+import TestComp from "../components/testcomp.vue";
+import ContactMe from "../components/ContactMe.vue";
+import NameAndFocus from "../components/NameAndFocus.vue";
+import EducationExperinceText from "../components/EducationExperinceText.vue";
+import Skill from "../components/Skill.vue";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<div class="mx-auto w-fit">
-		<div class="mt-30">
-			<NameAndFocus/>
-		<ContactMe />
-		<EducationExperinceText place="High school", position="Collins hill", duration="2020-2020" />
-	<div class="flex flex-row">
-		<Skill logo="python" name="python" />	
-	<Skill logo="python" name="python" />
-</div>
-	</div>
-		
-	</div>	
-	
-	
+  <div class="mx-auto w-fit">
+    <div class="mt-23">
+      <div>
+        <div class="flex flex-row">
+          <NameAndFocus />
+        </div>
+
+        <ContactMe />
+      </div>
+
+      <div class="flex flex-col ">
+        <h3 class="m-0 mt-7">Education and experience</h3>
+        <div class="flex flex-row w-5/6 flex-wrap">
+          <EducationExperinceText
+            place="High school"
+            position="Collins Hill High School"
+            duration="2021-2025"
+          />
+
+          <EducationExperinceText
+            place="Dual enrolment"
+            position="Georgia Gwinnett College"
+            duration="2024-2025"
+          />
+
+          <EducationExperinceText
+            place="Undergrade software eng"
+            position="Kennesaw state university"
+            duration="2025-2029(future)"
+          />
+
+          <EducationExperinceText
+            place="Baybol Clinic & reaserch"
+            ,
+            position="Website manager"
+            ,
+            duration="2023-now"
+          />
+        </div>
+      </div>
+
+      <div>
+        <h3 class="m-0 mt-7">Tech Stack</h3>
+        <p class="text-white/58 m-0">
+          These are the technologies i use to build out my ideas.
+        </p>
+        <div class="flex flex-row">
+          <Skill logo="python" name="python" />
+          <Skill logo="python" name="python" />
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>

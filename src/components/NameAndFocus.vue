@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <h1 class="text-5xl font-bold my-0">Oluwajomiloju Adediran</h1>
-    <p class="  text-2xl font-medium my-2 text-white/57">
+    <h3 class="text-4xl font-bold my-0">Oluwajomiloju Adediran</h3>
+    <p class="  text-1xl font-medium my-2 text-white/57">
       Machine learning/AI  •  Fullstack  •  Cybersecurity
     </p>
   </div>

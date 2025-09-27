@@ -1,12 +1,24 @@
 <template>
-    <div class="w-fit flex flex-col mt-2  justify-start content-start">
-        
+  <div class="">
+    <div>
+      <img :src="`/${image}.svg`" :alt="image" />
     </div>
+    <div>
+      <h1>{{ name }}</h1>
+      <p>{{ description }}</p>
+      <li v-for="skill in skills">
+        <img class="mr-2 w-6" :src="`/${skill}.svg`" :alt="skill" />
+      </li>
+    </div>
+  </div>
 </template>
-
-
 
 <script setup lang="ts">
 import { ref } from "vue";
-defineProps(['logo', 'name'])
+defineProps<{
+  image?: string;
+  name?: string;
+  description?: number;
+  skills?: string[];
+}>();
 </script>
