@@ -1,7 +1,9 @@
 
 <template>
-  <div class="mt-2 mb-7 w-40 h-12 flex flex-row rounded-xl border-white border-1 content-center items-center justify-center">
-     <svg width="24" xmlns="http://www.w3.org/2000/svg" height="20" id="screenshot-b8b88ada-de43-8091-8006-d870047e780d" viewBox="2425 242 24 24" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+  <a href="" class="no-underline text-white">
+  <div class="mt-2 mb-7 w-40 h-12 flex flex-row rounded-xl border-white border-1 content-center items-center justify-center no-underline">
+     
+    <svg width="24" xmlns="http://www.w3.org/2000/svg" height="20" id="screenshot-b8b88ada-de43-8091-8006-d870047e780d" viewBox="2425 242 24 24" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
   <g id="shape-b8b88ada-de43-8091-8006-d870047e780d">
     <defs>
       <clipPath id="frame-clip-b8b88ada-de43-8091-8006-d870047e780d-render-252" class="frame-clip frame-clip-def">
@@ -39,8 +41,8 @@
     </g>
   </g>
 </svg>
-    <p class="my-0 mx-2 h-auto text-center font-normal text-1xl">Contact me</p>
-  </div>
+    <p class="my-0 mx-2 h-auto text-center font-normal text-1xl no-underline">Contact me</p>
+  </div></a>
 </template>
 
 <script setup lang="ts">
