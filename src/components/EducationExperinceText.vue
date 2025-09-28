@@ -10,6 +10,6 @@
 
 
 <script setup lang="ts">
-import { ref } from "vue";
+//import { ref } from "vue";
 defineProps(['place', 'position', 'duration'])
 </script>

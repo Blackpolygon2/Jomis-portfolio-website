@@ -5,14 +5,15 @@ import ContactMe from "../components/ContactMe.vue";
 import NameAndFocus from "../components/NameAndFocus.vue";
 import EducationExperinceText from "../components/EducationExperinceText.vue";
 import Skill from "../components/Skill.vue";
+import Project from "../components/Project.vue";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <div class="mx-auto w-fit">
-    <div class="mt-23">
-      <div>
+  <div class="w-fit h-fit flex flex-row">
+    <div class="mt-23 ml-20 w-3/6">
+      <div class="w-fit">
         <div class="flex flex-row">
           <NameAndFocus />
         </div>
@@ -20,7 +21,7 @@ import Skill from "../components/Skill.vue";
         <ContactMe />
       </div>
 
-      <div class="flex flex-col ">
+      <div class="flex flex-col w-fit">
         <h3 class="m-0 mt-7">Education and experience</h3>
         <div class="flex flex-row w-5/6 flex-wrap">
           <EducationExperinceText
@@ -51,15 +52,38 @@ import Skill from "../components/Skill.vue";
         </div>
       </div>
 
-      <div>
-        <h3 class="m-0 mt-7">Tech Stack</h3>
-        <p class="text-white/58 m-0">
+      <div class="w-3/4">
+        <h3 class="m-0 mt-7 w-fit">Tech Stack</h3>
+        <p class="text-white/58 m-0 w-fit">
           These are the technologies i use to build out my ideas.
         </p>
-        <div class="flex flex-row">
+        <div class="flex flex-row flex-wrap">
           <Skill logo="python" name="Python" />
           <Skill logo="rust" name="Rust" />
+          <Skill logo="typescript" name="Typescript" />
+          <Skill logo="tailwind" name="Tailwind" />
+          <Skill logo="linux" name="Linux" />
+          <Skill logo="mysql" name="MySQL" />
+          <Skill logo="git" name="Git" />
+          <Skill logo="pytorch" name="Pytorch" />
+          <Skill logo="react" name="React" />
+          <Skill logo="vuejs" name="Vue" />
+          <Skill logo="docker" name="Docker" />
         </div>
+      </div>
+    </div>
+
+    <div class="mt-23">
+      <div class="flex flex-row">
+        <h2>Projects</h2>
+      </div>
+      <div class="flex flex-col">
+        <Project
+          image="images/lable_review"
+          name="The lable Review"
+          description="a simple website i made for a client. it's purpose was to let people discover african stores in a similar way to Tripadvisor. I built it using flask and an sql database"
+          skills={["python", "mysql"]}
+        />
       </div>
     </div>
   </div>

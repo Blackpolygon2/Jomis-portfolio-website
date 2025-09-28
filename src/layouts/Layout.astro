@@ -7,7 +7,7 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Jomi's Portfolio</title>
 	</head>
-	<body class="bg-black text-white">
+	<body class="bg-black text-white no-scrollbar">
 		<slot />
 	</body>
 </html>
@@ -22,6 +22,9 @@
 		height: 100%;
 		font-family: 'Inter', sans-serif;
 	}
+	@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
 
 	
 </style>
