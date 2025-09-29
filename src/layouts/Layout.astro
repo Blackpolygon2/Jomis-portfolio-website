@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -8,7 +8,10 @@
     <title>Jomi's Portfolio</title>
   </head>
   <body class="text-white no-scrollbar">
-    <slot />
+    <main>
+      <slot />
+    </main>
+    
     <div class="blob-cont">
       <div class="yellow blob"></div>
       <div class="red blob"></div>
@@ -27,9 +30,9 @@
     height: 100%;
     font-family: "Inter", sans-serif;
     background-color: var(--bg);
-
+    overflow-x: hidden; 
     @media (width < 48rem /* 768px */) {
-      width:fit-content;
+      height:fit-content;
     }
   }
   :root {
@@ -51,9 +54,20 @@
 
     opacity: 40%;
 
-    @media (width < 48rem /* 768px */) {
-      width:fit-content;
+     @media (width < 48rem /* 768px */) {
+      /* UPDATED mobile styles */
+      position: fixed;
+      width: 100vw;
+      height: fit-content;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.5;
     }
+  }
+  main {
+    position: relative;
+    z-index: 1;
   }
 
   body::before {
@@ -61,6 +75,7 @@
     filter: url(#noiseFilter);
      @media (width < 48rem /* 768px */) {
       filter: none;
+      background: var(--bg);
     }
   }
 
@@ -84,8 +99,8 @@
 
   .blob-cont {
     @media (width < 48rem /* 768px */) {
-      top: -80em;
-      left: 0em;
+      top: -0em;
+      left: 10em;
       width: 300px;
       position: fixed;
     }
