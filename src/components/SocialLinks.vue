@@ -1,6 +1,8 @@
 <template>
-    <div class="w-fit flex flex-col mt-2  justify-start content-start">
-        
+    <div class="flex flex-row ml-4">
+        <a class="flex items-center justify-center"><img loading="lazy" class="mr-2 w-7 mb-8" :src="`/github.svg`" :alt="logo"></a>
+        <a class="flex items-center justify-center"><img loading="lazy" class="mr-2 w-7 mb-8" :src="`/linkedin.svg`" :alt="logo"></a>
+        <a class="flex items-center justify-center"><img loading="lazy" class="mr-2 w-7 mb-8" :src="`/fileicon.svg`" :alt="logo"></a>
     </div>
 </template>
 

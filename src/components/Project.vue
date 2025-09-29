@@ -1,4 +1,5 @@
 <template>
+  <a :href="`${link}`" class="no-underline text-white">
   <div class="flex flex-row border-1 rounded-xl mb-8">
     <div class="">
       <img :src="`/${image}.png`" :alt="image" class="w-80 h-60 object-contain m-8 mr-0 rounded" loading="lazy" />
@@ -14,6 +15,7 @@
       </div>
     </div>
   </div>
+  </a>
 </template>
 
 <script setup lang="ts">
@@ -23,9 +25,10 @@ defineProps<{
   image?: string;
   name?: string;
   description?: string;
+  link?:string,
   skills?: string[];
 }>();
-const color = await prominent("/${image}.png", { amount: 1 })
+const color = await prominent('/${image}.png', { amount: 1 })
 console.log(color)
 
 </script>

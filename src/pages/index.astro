@@ -6,6 +6,7 @@ import NameAndFocus from "../components/NameAndFocus.vue";
 import EducationExperinceText from "../components/EducationExperinceText.vue";
 import Skill from "../components/Skill.vue";
 import Project from "../components/Project.vue";
+import SocialLinks from "../components/SocialLinks.vue";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -15,7 +16,7 @@ import Project from "../components/Project.vue";
     <div class="mt-23 ml-20 w-3/6">
       <div class="w-fit">
         <div class="flex flex-row">
-          <NameAndFocus />
+          <NameAndFocus /> <SocialLinks/>
         </div>
 
         <ContactMe />
@@ -91,10 +92,10 @@ import Project from "../components/Project.vue";
           skills={["python", "linux"]}
         />
         <Project
-          image="images/lable_review"
-          name="The lable Review"
-          description="a simple website i made for a client. it's purpose was to let people discover african stores in a similar way to Tripadvisor. I built it using flask and an sql database"
-          skills={["python", "mysql"]}
+          image="images/openpaper"
+          name="Openpaper"
+          description="Openpaer is a website and a application that i am developing in order to make customizing your linux desktop install more convinent. It lets you easily upload and download wallpaper's and dotfiles with the use of the website or the app/cli tool"
+          skills={["python", "mysql","rust","typescript","linux","react"]}
         />
       </div>
     </div>
