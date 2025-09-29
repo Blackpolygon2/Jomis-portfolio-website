@@ -1,7 +1,7 @@
 
 <template>
   <a href="mailto:oluwajomilojuadedrian@protonmail.com" class="no-underline text-white">
-  <div class="mt-2 mb-7 w-40 h-12 flex flex-row rounded-xl border-white border-1 content-center items-center justify-center no-underline hover:bg-white/10 hover:border-white/10 ease duration-200">
+  <div class="max-md:mx-auto mt-2 mb-7 w-40 h-12 flex flex-row rounded-xl border-white border-1 content-center items-center justify-center no-underline hover:bg-white/10 hover:border-white/10 ease duration-200">
      
     <svg class="w-4" xmlns="http://www.w3.org/2000/svg"  id="screenshot-b8b88ada-de43-8091-8006-d870047e780d" viewBox="2425 242 24 24" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
   <g id="shape-b8b88ada-de43-8091-8006-d870047e780d">

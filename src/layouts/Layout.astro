@@ -1,135 +1,195 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Jomi's Portfolio</title>
-	</head>
-	<body class=" text-white no-scrollbar">
-		<slot />
-		<div class="blob-cont">
-    <div class="yellow blob"></div>
-    <div class="red blob"></div>
-    <div class="green blob"></div>
-  </div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Jomi's Portfolio</title>
+  </head>
+  <body class="text-white no-scrollbar">
+    <slot />
+    <div class="blob-cont">
+      <div class="yellow blob"></div>
+      <div class="red blob"></div>
+      <div class="green blob"></div>
+    </div>
+  </body>
 </html>
 
 <style>
-	@import "tailwindcss";
-	@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		font-family: 'Inter', sans-serif;
-		background-color: var(--bg);
-	}
-	:root {
-<<<<<<< HEAD
-  --bg: #000000de;
-=======
-  --bg: #000000b6;
->>>>>>> 6394548 (stuff)
-  --text: #151515;
-  --yellow: #EDB74D;
-  --red: #EB6666;
-  --green: #6FB18A;
-}
-body::before,
-body::after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  @import "tailwindcss";
+  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg);
 
-  opacity: 40%;
-}
+    @media (width < 48rem /* 768px */) {
+      width:fit-content;
+    }
+  }
+  :root {
+    --bg: #000000c5;
+    --text: #151515;
+    --yellow: #edb74d;
+    --red: #eb6666;
+    --green: #6fb18a;
+  }
+  body::before,
+  body::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 
-body::before {
-  background: #ffffff;
-  filter: url(#noiseFilter);
-}
+    opacity: 40%;
 
-	.blob-cont {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: -2;
-  height: 500px;
-  width: 500px;
-  position: relative;
-  top: -58em;
-  left: 26em;
-}
+    @media (width < 48rem /* 768px */) {
+      width:fit-content;
+    }
+  }
 
+  body::before {
+    background: #ffffff;
+    filter: url(#noiseFilter);
+     @media (width < 48rem /* 768px */) {
+      filter: none;
+    }
+  }
 
-.blob {
-  border-radius: 100px;
-  filter: blur(120px);
-}
+  .blob-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    top: -58em;
+    left: 26em;
+  }
 
-.yellow {
-  background-color: var(--yellow);
-  position: absolute;
-  top: 200px;
-  left: 100px;
-  height: 200px;
-  width: 200px;
-  
-  animation: yellow 8s infinite ease;
-}
+  .blob {
+    border-radius: 100px;
+    filter: blur(120px);
+  }
 
-.green {
-  background-color: var(--green);
-  position: absolute;
-  top: 80px;
-  right: -20px;
-  height: 300px;
-  width: 350px;
-  
-  animation: green 8s infinite ease;
-}
+  .blob-cont {
+    @media (width < 48rem /* 768px */) {
+      top: -80em;
+      left: 0em;
+      width: 300px;
+      position: fixed;
+    }
+  }
 
-.red {
-  background-color: var(--red);
-  position: absolute;
-  right: 0;
-  top: 300px;
-  height: 350px;
-  width: 300px;
-  
-  animation: red 8s infinite linear;
-}
+  .yellow {
+    background-color: var(--yellow);
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    height: 200px;
+    width: 200px;
 
-@keyframes yellow {
-  0% {top: 200px; left: 100px; transform: scale(1);}
-  30% {top: 300px; left: 150px; transform: scale(1.2);}
-  60% {top: 100px; left: 200px; transform: scale(1.3);}
-  100% {top: 200px; left: 100px; transform: scale(1);}
-}
+    animation: yellow 8s infinite ease;
+  }
 
-@keyframes green {
-  0% {top: 80px; right: -20px; transform: scale(1.2);}
-  30% {top: 300px; right: -20px;transform: scale(1);}
-  60% {top: 200px; right: 100px;transform: scale(1);}
-  100% {top: 80px; right: -20px; transform: scale(1.2);}
-}
+  .green {
+    background-color: var(--green);
+    position: absolute;
+    top: 80px;
+    right: -20px;
+    height: 300px;
+    width: 350px;
 
-@keyframes red {
-  0% {top: 250px; right: 0px; transform: scale(1);}
-  30% {top: 150px; right: 150px;transform: scale(1.4);}
-  60% {top: 250px; right: 100px;transform: scale(1);}
-  100% {top: 250px; right: 0px; transform: scale(1);}
-}
+    animation: green 8s infinite ease;
+  }
 
+  .red {
+    background-color: var(--red);
+    position: absolute;
+    right: 0;
+    top: 300px;
+    height: 350px;
+    width: 300px;
 
-	
+    animation: red 8s infinite linear;
+  }
+
+  @keyframes yellow {
+    0% {
+      top: 200px;
+      left: 100px;
+      transform: scale(1);
+    }
+    30% {
+      top: 300px;
+      left: 150px;
+      transform: scale(1.2);
+    }
+    60% {
+      top: 100px;
+      left: 200px;
+      transform: scale(1.3);
+    }
+    100% {
+      top: 200px;
+      left: 100px;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes green {
+    0% {
+      top: 80px;
+      right: -20px;
+      transform: scale(1.2);
+    }
+    30% {
+      top: 300px;
+      right: -20px;
+      transform: scale(1);
+    }
+    60% {
+      top: 200px;
+      right: 100px;
+      transform: scale(1);
+    }
+    100% {
+      top: 80px;
+      right: -20px;
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes red {
+    0% {
+      top: 250px;
+      right: 0px;
+      transform: scale(1);
+    }
+    30% {
+      top: 150px;
+      right: 150px;
+      transform: scale(1.4);
+    }
+    60% {
+      top: 250px;
+      right: 100px;
+      transform: scale(1);
+    }
+    100% {
+      top: 250px;
+      right: 0px;
+      transform: scale(1);
+    }
+  }
 </style>
