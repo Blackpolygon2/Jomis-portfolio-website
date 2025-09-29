@@ -18,6 +18,8 @@
     "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.14.1",
     "color.js": "^1.2.0",
+    "colorthief": "^2.6.0",
+    "node-vibrant": "^4.0.3",
     "primevue": "^4.3.9",
     "tailwindcss": "^4.1.13",
     "vue": "^3.5.21"

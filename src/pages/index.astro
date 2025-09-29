@@ -29,6 +29,7 @@ import SocialLinks from "../components/SocialLinks.vue";
             place="High school"
             position="Collins Hill High School"
             duration="2021-2025"
+            
           />
 
           <EducationExperinceText
@@ -78,24 +79,30 @@ import SocialLinks from "../components/SocialLinks.vue";
       <div class="flex flex-row">
         <h2>Projects</h2>
       </div>
-      <div class="flex flex-col overflow-auto h-4/6 hide-scrollbar shadow-[inset_0_-8px_10px_-2px_rgba(0,0,0,0.3)] pr-3">
+      <div class="flex flex-col overflow-auto h-4/6 hide-scrollbar shadow-[inset_0_-8px_10px_-2px_rgba(0,0,0,0.3)] px-5 ">
         <Project
+        link="https://github.com/Blackpolygon2/The-Lable-Review"
           image="images/lable_review"
           name="The lable Review"
           description="A simple website i made for a client. it's purpose was to let people discover african stores in a similar way to Tripadvisor. I built it using flask and an sql database."
           skills={["python", "mysql"]}
+          client:load
         />
         <Project
+        link="https://github.com/Blackpolygon2/Tailscale-systray-linux"
           image="images/tailscale_systray"
           name="Tailscale System Tray"
           description="A system tray application written in python. it uses python and QT in order interface with the tailscale cli in order to make the experience of using tailscale on linux more convenient. "
           skills={["python", "linux"]}
+          client:load
         />
         <Project
+        link="https://github.com/Blackpolygon2/openpaper-website"
           image="images/openpaper"
           name="Openpaper"
           description="Openpaer is a website and a application that i am developing in order to make customizing your linux desktop install more convinent. It lets you easily upload and download wallpaper's and dotfiles with the use of the website or the app/cli tool"
           skills={["python", "mysql","rust","typescript","linux","react"]}
+          client:load
         />
       </div>
     </div>

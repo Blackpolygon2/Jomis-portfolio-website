@@ -1,6 +1,7 @@
+
 <template>
   <a :href="`${link}`" class="no-underline text-white">
-  <div class="flex flex-row border-1 rounded-xl mb-8">
+  <div :class="'flex flex-row border-1 rounded-xl mb-8 hover:inset-shadow-sm inset-shadow-green-900/50 ease duration-400'">
     <div class="">
       <img :src="`/${image}.png`" :alt="image" class="w-80 h-60 object-contain m-8 mr-0 rounded" loading="lazy" />
     </div>
@@ -18,17 +19,53 @@
   </a>
 </template>
 
+
+
+
 <script setup lang="ts">
-import { ref } from "vue";
-import { prominent } from 'color.js' 
-defineProps<{
-  image?: string;
-  name?: string;
-  description?: string;
-  link?:string,
-  skills?: string[];
-}>();
-const color = await prominent('/${image}.png', { amount: 1 });
-console.log(color)
+import { ref, onMounted } from "vue";
+
+
+const props = defineProps<{
+  image?: string
+  name?: string
+  description?: string
+  link?: string
+  skills?: string[]
+}>()
+
+const prominentColor = ref<string | null>(null)
+let shadow_color;
+onMounted(async () => {
+  if (!props.image) return
+  const imagePath = `/${props.image}.png`
+  console.log('loading image for color extraction:', imagePath)
+
+
+  const img = new Image()
+  img.crossOrigin = 'Anonymous'
+  img.src = imagePath
+
+  try {
+    await new Promise((resolve, reject) => {
+      img.onload = () => resolve(true)
+      img.onerror = (e) => reject(e)
+    })
+
+
+    const { default: ColorThief } = await import('colorthief')
+    const ct = new ColorThief()
+
+    const color = ct.getColor(img) as number[]
+    if (Array.isArray(color)) {
+      const [r, g, b] = color
+      shadow_color=color
+      prominentColor.value = `rgb(${r}, ${g}, ${b})`
+      console.log('color thief prominent color:', prominentColor.value)
+    }
+  } catch (err) {
+    console.error('Error extracting color with ColorThief', err)
+  }
+})
 
 </script>
