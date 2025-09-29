@@ -7,7 +7,7 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Jomi's Portfolio</title>
 	</head>
-	<body class="bg-black text-white no-scrollbar">
+	<body class=" text-white no-scrollbar">
 		<slot />
 		<div class="blob-cont">
     <div class="yellow blob"></div>
@@ -29,7 +29,7 @@
 		background-color: var(--bg);
 	}
 	:root {
-  --bg: #070707;
+  --bg: #000000ed;
   --text: #151515;
   --yellow: #EDB74D;
   --red: #EB6666;
@@ -62,14 +62,14 @@ body::before {
   height: 500px;
   width: 500px;
   position: relative;
-  top: 10em;
-  right: 5em;
+  top: -58em;
+  left: 26em;
 }
 
 
 .blob {
   border-radius: 100px;
-  filter: blur(100px);
+  filter: blur(120px);
 }
 
 .yellow {
@@ -88,8 +88,8 @@ body::before {
   position: absolute;
   top: 80px;
   right: -20px;
-  height: 200px;
-  width: 250px;
+  height: 300px;
+  width: 350px;
   
   animation: green 8s infinite ease;
 }
@@ -99,8 +99,8 @@ body::before {
   position: absolute;
   right: 0;
   top: 300px;
-  height: 250px;
-  width: 200px;
+  height: 350px;
+  width: 300px;
   
   animation: red 8s infinite linear;
 }

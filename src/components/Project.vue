@@ -28,7 +28,7 @@ defineProps<{
   link?:string,
   skills?: string[];
 }>();
-const color = await prominent('/${image}.png', { amount: 1 })
+const color = await prominent('/${image}.png', { amount: 1 });
 console.log(color)
 
 </script>
