@@ -23,6 +23,7 @@
 
 
 <script setup lang="ts">
+<<<<<<< HEAD
 import { ref, onMounted } from "vue";
 
 
@@ -67,5 +68,17 @@ onMounted(async () => {
     console.error('Error extracting color with ColorThief', err)
   }
 })
+=======
+import { ref } from "vue";
+ 
+defineProps<{
+  image?: string;
+  name?: string;
+  description?: string;
+  link?:string,
+  skills?: string[];
+}>();
+
+>>>>>>> 6394548 (stuff)
 
 </script>
