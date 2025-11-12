@@ -17,8 +17,8 @@ set -e
 echo " Starting deployment..."
 
 
-echo " git clone"
-git clone https://github.com/Blackpolygon2/Jomis-portfolio-website.git 
+echo " git pull"
+git pull origin main
 
 
 echo "Building Docker image: $IMAGE_NAME..."
